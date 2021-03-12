@@ -81,7 +81,7 @@ li{
     text-align: center;
     text-decoration: none;
     font-family: 'Audiowide';
-    font-size: 20px;
+    font-size: 18px;
 }
 li a:hover {
     color: #FF0000;
@@ -93,6 +93,8 @@ li a:hover {
     background-image: url(../icons/hamburger-menu.png);
     display: none;
 }
+
+
 
 /* Logo Area */
 .mainArea{
@@ -283,7 +285,7 @@ footer h5{
 .casestudyCard{
     height: 312px;
     width: 500px;
-    background-position: top;
+    background-position: center;
     background-size: 100%;
     background-repeat: no-repeat;
     cursor: pointer;
@@ -302,7 +304,7 @@ footer h5{
     grid-area: wbwcaseStudy;
     place-self: center;
 }
-.fccHover, .wbwHover{
+.cardHover{
     height: 282px;
     padding: 15px;
     display: grid;
@@ -314,9 +316,52 @@ footer h5{
     z-index: 100;
     transition:all .3s ease-in-out
 }
-.fccHover:hover, .wbwHover:hover{
+.cardHover:hover{
     color: white;
     background-color: rgba(0, 0, 0, 0.7);
+}
+
+/* ARTWORK PAGE */
+#artwork{
+    margin: 40px 140px 80px 140px;
+    width: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    column-gap: 20px;
+    row-gap: 20px;
+    justify-content: center;
+    align-content: center;
+    grid-template-areas: "illustration calligraphy"
+    "logoDesign eventBanner";
+}
+#artwork h4{
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    font-family: 'Audiowide', cursive;
+    line-height: 1.29;
+    letter-spacing: normal;
+}
+#illustrationCard{
+    background-image: url(../images/artwork/budoCard.png);
+    grid-area: illustration;
+    place-self: center;
+}
+#calligraphy{
+    background-image: url(../images/artwork/caligraphyCard.png);
+    grid-area: calligraphy;
+    place-self: center;
+}
+#logoDesign{
+    background-image: url(../images/artwork/logoCard.png);
+    grid-area: logoDesign;
+    place-self: center;
+}
+#eventBanner{
+    background-image: url(../images/artwork/eventbannerCard.png);
+    grid-area: eventBanner;
+    place-self: center;
 }
 
 @media only screen and (max-width: 800px){
@@ -372,11 +417,21 @@ footer h5{
         "fcccaseStudy" 
         "wbwcaseStudy" 
     }
+    #artwork{
+        margin: 20px 20px;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        grid-template-areas: 
+        "illustration" 
+        "calligraphy"
+        "logoDesign"
+        "eventBanner"; 
+    }
     .casestudyCard{
         display:flex;
         flex-direction: column-reverse;
     }
-    .fccHover{
+    .cardHover{
         height: 20%;
         padding: 15px;
         display: grid;
@@ -387,24 +442,11 @@ footer h5{
         background-color: rgba(0, 0, 0, 0.7);
         z-index: 100;
     }
-    .fccHover p{
-        display: none;
-    }
-    .wbwHover{
-        height: 20%;
-        padding: 15px;
-        display: grid;
-        align-items: flex-start;
-        justify-content: center;
-        text-align: center;
-        color: white;
-        background-color: rgba(0, 0, 0, 0.7);
-        z-index: 100;
-    }
-    .wbwHover p{
+    .cardHover p{
         display: none;
     }
 }
+
 
 @media only screen and (max-width: 600px){
     /* Typography */
@@ -509,7 +551,7 @@ footer h5{
     #casestudies{
         margin: 20px;
     }
-    .fccHover, .wbwHover{
-        margin: 0px 20px;
+    #artowrk{
+        margin: 20px;
     }
 }
