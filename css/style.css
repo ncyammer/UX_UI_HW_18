@@ -101,6 +101,7 @@ li a:hover {
 }
 .mobilenavigation {
     display: none;
+    z-index: 105;
 }
 
 /* Logo Area */
@@ -420,6 +421,9 @@ footer h5 {
     .navigation {
         display: none;
     }
+    .topnav{
+        width:100%;
+    }
     #hamburgermenu {
         float: left;
         display: flex;
@@ -482,13 +486,13 @@ footer h5 {
         justify-self: center;
     }
     #casestudies {
-        margin: 20px 20px;
+        margin: 20px 20px 20px 20px;
         grid-template-columns: 1fr;
         row-gap: 20px;
         grid-template-areas: "fcccaseStudy" "wbwcaseStudy"
     }
     #artwork {
-        margin: 20px 20px;
+        margin: 20px 20px 20px 20px;
         grid-template-columns: 1fr;
         grid-template-rows: 1fr 1fr 1fr 1fr;
         grid-template-areas: "illustration" "calligraphy" "logoDesign" "eventBanner";
