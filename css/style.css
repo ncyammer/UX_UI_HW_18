@@ -1,81 +1,86 @@
 /* Topline */
-body{
+
+body {
     background-color: white;
     margin: 0;
 }
-.centerImage{
+
+.centerImage {
     display: block;
     margin-left: auto;
     margin-right: auto;
     width: 50%;
 }
-.left{
+
+.left {
     float: left;
 }
-.center{
+
+.center {
     float: center;
 }
-.right{
+
+.right {
     float: right;
 }
 
 /* Typography */
-h1{
+h1 {
     font-family: 'Audiowide', cursive;
     font-size: 48px;
 }
-h2{
+h2 {
     font-family: 'Audiowide', cursive;
     font-size: 42px;
 }
-h3{
-    font-family:'Roboto', sans-serif;
+h3 {
+    font-family: 'Roboto', sans-serif;
     font-size: 36px;
 }
-h4{
-    font-family:'Roboto', sans-serif;
+h4 {
+    font-family: 'Roboto', sans-serif;
     font-size: 24px;
 }
-h5{
-    font-family:'Roboto', sans-serif;
+h5 {
+    font-family: 'Roboto', sans-serif;
     font-size: 20px;
 }
-p{
+p {
     font-family: 'Roboto', sans-serif;
     font-size: 16pt;
 }
-li{
+li {
     font-family: 'Roboto', sans-serif;
     font-size: 16pt;
 }
-.bold{
+.bold {
     font-weight: bold;
 }
 
 /* Nav Bar */
-.topnav{
+.topnav {
     height: 80px;
     width: 100%;
     margin: 0;
     overflow: hidden;
     background-color: #000000;
     text-align: center;
-    position:relative;
+    position: relative;
     top: 0px;
 }
-.navigation{
+.navigation {
     list-style-type: none;
     padding: 27px 0px;
     margin: 0px 140px;
     display: flex;
     justify-content: space-around;
     align-content: center;
-  }
+}
 .topnav li {
     height: 20px;
     padding: 0px 20px;
     margin: 0px 20px;
-} 
+}
 .topnav li a {
     color: white;
     text-align: center;
@@ -87,17 +92,19 @@ li a:hover {
     color: #FF0000;
 }
 
-#hamburgermenu{
+#hamburgermenu {
     height: 25px;
     width: 25px;
-    background-image: url(../icons/hamburger-menu.png);
+    background-image: url(../icons/hamburger-menu.png), url(../icons/close.png);
+    display: none;
+    position: absolute;
+}
+.mobilenavigation {
     display: none;
 }
 
-
-
 /* Logo Area */
-.mainArea{
+.mainArea {
     margin-top: 40px;
     margin-bottom: 40px;
     margin-left: 140px;
@@ -105,18 +112,21 @@ li a:hover {
     align-items: center;
     text-align: center;
 }
-.mainLogo h1{
+
+.mainLogo h1 {
     margin-top: 0;
     margin-bottom: 0px;
 }
-.logo{
+
+.logo {
     max-height: 250px;
     max-width: 250px;
     margin-bottom: 10px;
 }
 
 /* Medium Cards */
-#mediumCards{
+
+#mediumCards {
     margin: 40px 140px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -125,30 +135,36 @@ li a:hover {
     justify-content: center;
     grid-template-areas: "uxdesignCard artworkCard videoCard";
 }
-#mediumCards a{
+
+#mediumCards a {
     text-decoration: none;
 }
 
-#uxdesignCard{
+#uxdesignCard {
     grid-area: uxdesignCard;
-    background-image: url(../images/ux-hp-card@3x.png);
-    min-height: 250px;
-    height: auto;
-}
-#artworkCard{
-    grid-area: artworkCard;
-    background-image: url(../images/artwork-hp-card@3x.jpg);
-    min-height: 250px;
-    height: auto;
-}
-#videoCard{
-    grid-area: videoCard;
-    background-image: url(../images/video-hp-card@3x.png);
+    background-image: url(../images/ux-hp-card@3x.png), url(../images/alternate\ medium\ card.png);
+    background-color: #484848;
     min-height: 250px;
     height: auto;
 }
 
-.mediumCardstyle{
+#artworkCard {
+    grid-area: artworkCard;
+    background-image: url(../images/artwork-hp-card@3x.jpg), url(../images/alternate\ medium\ card.png);
+    background-color: #484848;
+    min-height: 250px;
+    height: auto;
+}
+
+#videoCard {
+    grid-area: videoCard;
+    background-image: url(../images/video-hp-card@3x.png), url(../images/alternate\ medium\ card.png);
+    background-color: #484848;
+    min-height: 250px;
+    height: auto;
+}
+
+.mediumCardstyle {
     background-position: top;
     background-size: cover;
     background-repeat: no-repeat;
@@ -159,25 +175,31 @@ li a:hover {
     align-content: end;
     transition: all .2s linear;
 }
-.mediumCardstyle h4{
+
+.mediumCardstyle h4 {
     transition: all .2s linear;
 }
-.mediumCardstyle:hover{
-    transform: translate(0,-10%);
-    filter:drop-shadow(0px 25px 10px rgba(0,0,0,0.5))
+
+.mediumCardstyle:hover {
+    transform: translate(0, -10%);
+    filter: drop-shadow(0px 25px 10px rgba(0, 0, 0, 0.5))
 }
-.mediumCardstyle:hover h4{
+
+.mediumCardstyle:hover h4 {
     color: #FF0000;
     font-size: 28px;
 }
-.mediumCardstyle:focus{
+
+.mediumCardstyle:focus {
     border: 3px solid #f00;
 }
+
 /* .mediumCardstyle img{
     width: 320px;
     height: 200px;
 } */
-.heading{
+
+.heading {
     background-color: rgba(0, 0, 0, .7);
     padding: 15px;
     color: white;
@@ -193,7 +215,8 @@ li a:hover {
 }
 
 /* Footer */
-footer{
+
+footer {
     height: 104px;
     padding: 80px 140px 80px 140px;
     background-color: #000000;
@@ -201,69 +224,80 @@ footer{
     align-items: center;
     justify-content: space-between;
 }
-footer h5{
-    color:white;
+
+footer h5 {
+    color: white;
     font-family: 'audiowide';
     margin: 0;
 }
-.footerIcons{
+
+.footerIcons {
     display: flex;
     object-fit: contain;
     margin-left: 20px;
     margin-right: 0px;
     text-align: center;
 }
-.linkedIn, .resume{
+
+.linkedIn, .resume {
     margin: 0px 20px;
 }
 
 /* ABOUT PAGE */
-.bio{
+
+.bio {
     margin: 40px 140px;
     padding: 0px 140px;
 }
 
 /* UX PAGE */
-#mainAreauxdesign{
+
+#mainAreauxdesign {
     height: 250px;
     margin: 40px 140px;
     display: grid;
     grid-template-columns: 250px auto auto;
     grid-template-rows: 20% 80%;
-    grid-template-areas: 
-    "uxLogo uxName uxName"
-    "uxLogo uxBio uxBio";
+    grid-template-areas: "uxLogo uxName uxName" "uxLogo uxBio uxBio";
 }
-#uxLogo{
+
+#uxLogo {
     max-height: 250px;
     max-width: 250px;
     justify-content: center;
     grid-area: uxLogo;
 }
-#uxLogo img{
+
+#uxLogo img {
     height: 100%;
     width: 100%;
 }
-#uxName{
+
+#uxName {
     margin: none;
     padding-left: 40px;
     align-self: center;
     grid-area: uxName;
 }
-#uxName h2{
+
+#uxName h2 {
     margin: 0;
 }
-#uxBio{
+
+#uxBio {
     text-align: left;
     padding-left: 40px;
     align-self: center;
     grid-area: uxBio;
 }
-#uxBio h4{
+
+#uxBio h4 {
     margin: 0;
 }
+
 /* Casestudy Cards */
-#casestudies{
+
+#casestudies {
     margin: 40px 140px 80px 140px;
     width: auto;
     display: grid;
@@ -274,7 +308,8 @@ footer h5{
     align-content: center;
     grid-template-areas: "fcccaseStudy wbwcaseStudy";
 }
-#casestudies h4{
+
+#casestudies h4 {
     font-weight: normal;
     font-stretch: normal;
     font-style: normal;
@@ -282,29 +317,34 @@ footer h5{
     line-height: 1.29;
     letter-spacing: normal;
 }
-.casestudyCard{
+
+.casestudyCard {
     height: 312px;
     width: 500px;
-    background-position: center;
+    background-position: top;
     background-size: 100%;
     background-repeat: no-repeat;
     cursor: pointer;
-    transition:all .3s ease-in-out
+    transition: all .3s ease-in-out
 }
-.casestudyCard:hover{
+
+.casestudyCard:hover {
     background-size: 105%;
 }
-#fcccaseStudy{
+
+#fcccaseStudy {
     background-image: url(../images/fcc-card.png);
     grid-area: fcccaseStudy;
     place-self: center;
 }
-#wbwcaseStudy{
+
+#wbwcaseStudy {
     background-image: url(../images/wbw-card.png);
     grid-area: wbwcaseStudy;
     place-self: center;
 }
-.cardHover{
+
+.cardHover {
     height: 282px;
     padding: 15px;
     display: grid;
@@ -314,15 +354,17 @@ footer h5{
     color: transparent;
     background-color: transparent;
     z-index: 100;
-    transition:all .3s ease-in-out
+    transition: all .3s ease-in-out
 }
-.cardHover:hover{
+
+.cardHover:hover {
     color: white;
     background-color: rgba(0, 0, 0, 0.7);
 }
 
 /* ARTWORK PAGE */
-#artwork{
+
+#artwork {
     margin: 40px 140px 80px 140px;
     width: auto;
     display: grid;
@@ -332,10 +374,10 @@ footer h5{
     row-gap: 20px;
     justify-content: center;
     align-content: center;
-    grid-template-areas: "illustration calligraphy"
-    "logoDesign eventBanner";
+    grid-template-areas: "illustration calligraphy" "logoDesign eventBanner";
 }
-#artwork h4{
+
+#artwork h4 {
     font-weight: normal;
     font-stretch: normal;
     font-style: normal;
@@ -343,56 +385,89 @@ footer h5{
     line-height: 1.29;
     letter-spacing: normal;
 }
-#illustrationCard{
-    background-image: url(../images/artwork/budoCard.png);
+
+#illustrationCard {
+    background-image: url(../images/artwork/budoCard.png), url(../images/alternate_card.png);
     grid-area: illustration;
     place-self: center;
 }
-#calligraphy{
-    background-image: url(../images/artwork/caligraphyCard.png);
+
+#calligraphy {
+    background-image: url(../images/artwork/caligraphyCard.png), url(../images/alternate_card.png);
     grid-area: calligraphy;
     place-self: center;
 }
-#logoDesign{
-    background-image: url(../images/artwork/logoCard.png);
+
+#logoDesign {
+    background-image: url(../images/artwork/logoCard.png), url(../images/alternate_card.png);
     grid-area: logoDesign;
     place-self: center;
 }
-#eventBanner{
-    background-image: url(../images/artwork/eventbannerCard.png);
+
+#eventBanner {
+    background-image: url(../images/artwork/eventbannerCard.png), url(../images/alternate_card.png);
     grid-area: eventBanner;
     place-self: center;
 }
 
-@media only screen and (max-width: 800px){
-    .navigation{
+@media only screen and (min-width: 800px){
+    .mobilenavigation{
         display: none;
-      }
-    #hamburgermenu{
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .navigation {
+        display: none;
+    }
+    #hamburgermenu {
         float: left;
         display: flex;
         align-items: center;
         margin: 27.5px;
     }
-    .bio{
-        margin: 70px 70px;
-        padding: 0;
-    } 
-    #mediumCards{
-        margin: 20px 20px;
-        grid-template-columns: 1fr;
-        row-gap:20px;
-        grid-template-areas: 
-        "uxdesignCard" 
-        "artworkCard" 
-        "videoCard";
-    }
-    .mediumCardstyle:hover{
-        background-size: cover;
+    .mobilenavigation {
+        list-style-type: none;
+        position: absolute;
+        top: 80px;
+        left: 0px;
+        padding-left: 0px;
+        margin: 0px;
+        background-color: black;
     }
     
+    .mobilenavigation li {
+        padding-left: 20px;
+        height: 55px;
+        width: 320px;
+        background-color: black;
+        border: 2px solid white;
+        display: flex;
+        justify-content: flex-start;
+    }
+    
+    .mobilenavigation li a {
+        font-family: Audiowide;
+        font-size: 16pt;
+        color: white;
+        text-decoration: none;
+        padding: 14.5px 0px 14.5px 0px;
+    }
+    .bio {
+        margin: 70px 70px;
+        padding: 0;
+    }
+    #mediumCards {
+        margin: 20px 20px;
+        grid-template-columns: 1fr;
+        row-gap: 20px;
+        grid-template-areas: "uxdesignCard" "artworkCard" "videoCard";
+    }
+    .mediumCardstyle:hover {
+        background-size: cover;
+    }
     /* UX PAGE */
-    #mainAreauxdesign{
+    #mainAreauxdesign {
         height: auto;
         margin: 20px 20px;
         display: grid;
@@ -401,37 +476,28 @@ footer h5{
         justify-content: center;
         text-align: center;
         row-gap: 20px;
-        grid-template-areas: 
-        "uxLogo"
-        "uxName"
-        "uxBio";
+        grid-template-areas: "uxLogo" "uxName" "uxBio";
     }
-    #uxLogo{
+    #uxLogo {
         justify-self: center;
     }
-    #casestudies{
+    #casestudies {
         margin: 20px 20px;
         grid-template-columns: 1fr;
-        row-gap:20px;
-        grid-template-areas: 
-        "fcccaseStudy" 
-        "wbwcaseStudy" 
+        row-gap: 20px;
+        grid-template-areas: "fcccaseStudy" "wbwcaseStudy"
     }
-    #artwork{
+    #artwork {
         margin: 20px 20px;
         grid-template-columns: 1fr;
         grid-template-rows: 1fr 1fr 1fr 1fr;
-        grid-template-areas: 
-        "illustration" 
-        "calligraphy"
-        "logoDesign"
-        "eventBanner"; 
+        grid-template-areas: "illustration" "calligraphy" "logoDesign" "eventBanner";
     }
-    .casestudyCard{
-        display:flex;
+    .casestudyCard {
+        display: flex;
         flex-direction: column-reverse;
     }
-    .cardHover{
+    .cardHover {
         height: 20%;
         padding: 15px;
         display: grid;
@@ -442,116 +508,113 @@ footer h5{
         background-color: rgba(0, 0, 0, 0.7);
         z-index: 100;
     }
-    .cardHover p{
+    .cardHover p {
         display: none;
     }
 }
 
-
-@media only screen and (max-width: 600px){
+@media only screen and (max-width: 600px) {
     /* Typography */
-    h1{
+    h1 {
         font-size: 24px;
     }
-    h2{
+    h2 {
         font-size: 20px;
     }
-    h3{
+    h3 {
         font-size: 20px;
     }
-    h4{
+    h4 {
         font-size: 18px;
     }
-    h5{
+    h5 {
         font-size: 16px;
     }
-    p{
+    p {
         font-size: 14pt;
     }
-    li{
+    li {
         font-size: 14pt;
     }
-    
     /* Navigation */
-    .topnav{
+    .topnav {
         height: 56px;
     }
-    #hamburgermenu{
+    #hamburgermenu {
         display: flex;
         align-items: center;
         margin: 15.5px 20px;
     }
-    
+    .mobilenavigation {
+        top: 56px;
+    }
+    .mobilenavigation li {
+        padding-left: 14px;
+    }
     /* LANDING PAGE */
-    .mainArea{
+    .mainArea {
         margin-top: 20px;
         margin-bottom: 20px;
         margin-left: 20px;
         margin-right: 20px;
     }
-    .logo{
+    .logo {
         height: 150px;
         width: 150px;
     }
-    .mediumCardstyle{
+    .mediumCardstyle {
         margin: 0;
     }
-    #mediumCards{
+    #mediumCards {
         margin: 20px 20px;
         grid-template-columns: 1fr;
-        row-gap:10px;
-        grid-template-areas: 
-        "uxdesignCard" 
-        "artworkCard" 
-        "videoCard";
+        row-gap: 10px;
+        grid-template-areas: "uxdesignCard" "artworkCard" "videoCard";
     }
-    
     /* Footer */
-    footer{
+    footer {
         height: 200px;
         padding: 40px 20px;
         flex-direction: column;
         align-content: center;
         text-align: center;
     }
-    .contact{
+    .contact {
         padding-bottom: 20px;
     }
-    .footerIcons{
+    .footerIcons {
         padding-top: 20px;
         margin: 0;
     }
-    .footerIcons img{
+    .footerIcons img {
         height: 50px;
         width: 50px;
     }
-
     /* ABOUT PAGE */
-    .bio{
+    .bio {
         margin: 20px 20px;
         padding: 0;
     }
-
     /* UX PAGE */
-    #mainAreauxdesign{
+    #mainAreauxdesign {
         grid-template-rows: 150px auto auto;
     }
-    #uxLogo{
+    #uxLogo {
         max-height: 150px;
         max-width: 150px;
         justify-self: center;
     }
-    #uxName{
+    #uxName {
         padding-left: 0;
     }
-    #uxBio{
+    #uxBio {
         text-align: center;
         padding: 0;
     }
-    #casestudies{
+    #casestudies {
         margin: 20px;
     }
-    #artowrk{
+    #artowrk {
         margin: 20px;
     }
 }
