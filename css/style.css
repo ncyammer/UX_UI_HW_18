@@ -95,9 +95,15 @@ li a:hover {
 #hamburgermenu {
     height: 25px;
     width: 25px;
-    background-image: url(../icons/hamburger-menu.png), url(../icons/close.png);
     display: none;
     position: absolute;
+}
+.openMenu{
+    position: absolute;
+}
+.closeMenu{
+    position: absolute;
+    display: none;
 }
 .mobilenavigation {
     display: none;
@@ -238,6 +244,10 @@ footer h5 {
     margin-left: 20px;
     margin-right: 0px;
     text-align: center;
+}
+
+footer a{
+    text-decoration: none;
 }
 
 .linkedIn, .resume {
@@ -470,6 +480,18 @@ footer h5 {
     .mediumCardstyle:hover {
         background-size: cover;
     }
+    /* Footer */
+    footer {
+        height: 250px;
+        padding: 40px 20px;
+        flex-direction: column;
+        align-content: center;
+        text-align: center;
+    }
+    .contact {
+        padding-bottom: 40px;
+    }
+
     /* UX PAGE */
     #mainAreauxdesign {
         height: auto;
@@ -576,13 +598,6 @@ footer h5 {
         grid-template-areas: "uxdesignCard" "artworkCard" "videoCard";
     }
     /* Footer */
-    footer {
-        height: 200px;
-        padding: 40px 20px;
-        flex-direction: column;
-        align-content: center;
-        text-align: center;
-    }
     .contact {
         padding-bottom: 20px;
     }
